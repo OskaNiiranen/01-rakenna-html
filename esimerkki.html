@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <title>JavaScript-esimerkki</title>
+  </head>
+  <body>
+    <script>
+      // Luo header-elementti
+      const header = document.createElement("header");
+
+      // Lisää class "ylätunniste" header-elementtiin
+      header.classList.add("ylätunniste");
+
+      // Luo h1-elementti ja aseta sille teksti
+      const h1 = document.createElement("h1");
+      h1.textContent = "Ykkösotsikko";
+
+      // Luo p-elementti ja aseta sille teksti
+      const p = document.createElement("p");
+      p.textContent = "Tämä on ylätunnisteen teksti.";
+
+      // Lisää h1 ja p elementit header-elementtiin
+      header.appendChild(h1);
+      header.appendChild(p);
+
+      // Hae body-elementti
+      const body = document.body;
+
+      // Lisää header-elementti bodyn sisälle
+      body.appendChild(header);
+
+      // Luo section-elementti
+      const section = document.createElement("section");
+      section.id = "rinnakkain";
+
+      // Luo p-elementti ja aseta sille id ja teksti
+      const pInSection = document.createElement("p");
+      pInSection.id = "kuvapaikka-p";
+      pInSection.textContent = "Tämä on sectionin teksti.";
+
+      // Luo figure-elementti
+      const figure = document.createElement("figure");
+      figure.id = "kuvapaikka";
+
+      // Luo img-elementti sisällä figure-elementissä
+      const img = document.createElement("img");
+      img.src =
+        "https://dri.es/files/images/blog/javascript-powered-multichannel.gif"; // Korvaa "kuva.jpg" kuvan polulla
+      img.alt = "Kuvaus kuvasta";
+      figure.appendChild(img);
+
+      // Lisää p-elementti ja figure-elementti section-elementtiin
+      section.appendChild(pInSection);
+      section.appendChild(figure);
+
+      // Lisää section-elementti bodyn sisälle
+      body.appendChild(section);
+
+      // Luo footer-elementti
+      const footer = document.createElement("footer");
+      footer.id = "alapalkki";
+
+      // Luo p-elementti footer-elementtiin ja aseta siihen teksti
+      const pInFooter = document.createElement("p");
+      pInFooter.textContent = "Tämä on alapalkin teksti.";
+
+      // Lisää p-elementti footer-elementtiin
+      footer.appendChild(pInFooter);
+
+      // Lisää footer-elementti bodyn sisälle
+      body.appendChild(footer);
+
+      // Lisää flex-säännöt section-elementtiin
+      // section.style.display = "flex";
+      // section.style.flexDirection = "row";
+      // section.style.alignItems = "center";
+
+      // Lisää flex-säännöt p-elementille
+      pInSection.style.flex = "1";
+    </script>
+  </body>
+</html>
